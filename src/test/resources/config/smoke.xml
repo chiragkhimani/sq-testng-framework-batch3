@@ -1,0 +1,29 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="MasterSuite" verbose="1" parallel="tests">
+
+	<test name="Smoke" parallel="true">
+		<groups>
+			<run>
+				<exclude name="Regression" />
+				<exclude name="WIP" />
+			</run>
+		</groups>
+
+		<packages>
+			<package name="com.automation.tests" />
+		</packages>
+	</test>
+
+	<test name="Smoke1" parallel="false">
+		<groups>
+			<run>
+				<exclude name="Regression" />
+				<exclude name="WIP" />
+			</run>
+		</groups>
+
+		<packages>
+			<package name="com.automation.tests" />
+		</packages>
+	</test>
+</suite>
